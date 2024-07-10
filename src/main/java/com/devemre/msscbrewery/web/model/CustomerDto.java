@@ -1,5 +1,6 @@
 package com.devemre.msscbrewery.web.model;
 
+import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,5 +15,8 @@ import java.util.UUID;
 public class CustomerDto {
 
     private UUID id;
+
+    @NotBlank
+    @Size(min = 3, max = 100)
     private String name;
 }
